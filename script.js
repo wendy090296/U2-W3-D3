@@ -24,6 +24,9 @@ const myBook = function () {
     .then((booksArray) => {
       console.log(booksArray);
       //   ora manipolo il DOM!
+      const divBook = document.getElementById("divBook");
+      const rowCard = document.createElement("div");
+      rowCard.classList.add("row", "justify-content-center", "g-3");
       booksArray.forEach((element) => {
         const cardContent = document.createElement("div");
         cardContent.classList.add("col-4");
@@ -40,7 +43,7 @@ const myBook = function () {
                       </div>
         `;
         divBook.appendChild(rowCard);
-        rowCard.appendChild(contenutoCard);
+        rowCard.appendChild(cardContainer);
 
         const deleteButton = contenutoCard.querySelector(".btn-primary");
         deleteButton.addEventListener("click", function () {
