@@ -47,7 +47,7 @@ const myBook = function () {
 
         const deleteButton = contenutoCard.querySelector(".btn-primary");
         deleteButton.addEventListener("click", function () {
-          contenutoCard.classList.add("d-none");
+          cardContainer.classList.add("d-none");
         });
       });
     });
